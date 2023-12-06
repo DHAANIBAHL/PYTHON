@@ -1,0 +1,22 @@
+def calc(a, b, function):
+  if function == "+":
+    return a + b
+  elif function == "-":
+    return a - b
+  elif function == "*":
+    return a * b
+  elif function == "/":
+    return a / b
+  elif function == "//":
+    return a // b
+  elif function == "%":
+    return a % b
+  else:
+    return "error"
+
+
+a = int(input("enter a number:"))
+b = int(input("enter a number:"))
+function = input("enter an operation")
+evaluation = calc(a, b, function)
+print("the answer is:", evaluation)
