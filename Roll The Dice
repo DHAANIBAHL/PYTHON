@@ -1,3 +1,4 @@
+#Roll the dice
 import random
 while True:
     user_choice=input("Roll the dice? (y/n): ")
@@ -12,6 +13,21 @@ while True:
     else:
         print('Invalid input! Please try again.')
 
-       
-   
+#Roll the dice with counter
+import random
+n=int(input("Enter the number of times you want to roll the dice: "))
+rolls=0
+while rolls<n:
+    user_choice=input("Roll the dice? (y/n): ")
+    choice=user_choice.lower()
+    if choice=='y':
+        die1=random.randint(1,6)     
+        die2=random.randint(1,6) 
+        print(die1, die2) 
+        rolls+=1  
+    elif choice=='n':
+        print('Thanks for playing!')
+        break
+    else:
+        print('Invalid input! Please try again.')
 
