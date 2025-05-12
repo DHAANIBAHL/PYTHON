@@ -12,7 +12,8 @@ This repo includes projects like:
 4. 📦 **QR Code Generator** — Generate QR codes from text or links.
 5. 🧮 **Basic Calculator** — Perform arithmetic operations interactively.
 6. 📊 **Number Guessing Game** — Classic high/low guessing game.
-7. 📆 **Age Calculator** — Find your age from date of bir
+7. 📆 **Age Calculator** — Find your age from date of birth
+8. 💱 **Currency Convertor** — Convert values form one currency to the other.s
 
 # 🔧 Technologies Used
 
