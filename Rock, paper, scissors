@@ -1,0 +1,45 @@
+import random
+while True:
+    user_input=input('Rock, Paper or Scissors? (r/p/s): ').lower()
+
+    if user_input!='r' and user_input!='p' and user_input!='s':
+        print('Invalid input')
+        continue
+    choices=['r','s','p']
+    comp_choice=random.choice(choices)
+
+    print(f'You chose {user_input}')
+    print(f'Computer chose {comp_choice}')
+
+
+    if user_input==comp_choice:
+        print('Oh! it is a tie.')
+    elif user_input=='p' and comp_choice== 'r':
+        print('You win!!')
+    elif user_input=='s' and comp_choice== 'p':
+        print('You win!!')
+    elif user_input=='r' and comp_choice== 's':
+        print('You win!!')
+    else:
+        print('you lose')
+
+    user_continue=input('Would you like to continue playing (y/n): ').lower()
+    if user_continue=='n':
+        break
+    
+
+
+
+
+
+#invalid input
+#compuetr choice random
+#print choice
+#find winner
+# ask continue(y/n)
+#if yes
+    #repeat
+#if no
+    #terminate
+
+
