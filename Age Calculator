@@ -1,0 +1,27 @@
+from datetime import datetime
+
+def age_calc(birthdate):
+    today = datetime.today()
+    birthdate = datetime.strptime(birthdate, "%Y-%m-%d")
+
+    years = today.year - birthdate.year
+    months = today.month - birthdate.month
+    days = today.day - birthdate.day
+
+    if days < 0:
+        months -= 1
+        days += (datetime(today.year, today.month, 1) - datetime(today.year, today.month - 1, 1)).days
+
+    if months < 0:
+        years -= 1
+        months += 12
+
+    return years, months, days
+
+user_dob=input("Enter your date of birth (YYYY-MM-DD): ")
+
+try:
+    years, months, days = age_calc(user_dob)
+    print(f"You are {years} years, {months} months, and {days} days old.")
+except ValueError:
+    print("Invalid date format! Please enter in YYYY-MM-DD format.")
