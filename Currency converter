@@ -1,0 +1,32 @@
+while True:
+    try:
+        amount=float(input('Enter an amount here: '))
+        if amount<1:
+            raise ValueError
+        break
+    except ValueError:
+        print('Enter a valid value please.')    
+
+currencies=('INR','CAD','USD')
+while True:
+    currency=input('Which currency is it (INR/USD/CAD): ').upper()
+    if currency not in currencies:
+        print('Invalid currency')
+    else:
+        break
+
+while True:
+    converted_currency=input('Which currency do you want to convert to(INR/USD/CAD): ').upper()
+    if converted_currency not in currencies:
+        print('Invalid currency')
+    else:
+        break
+
+conversion_table={
+    'INR':{'USD':0.85, 'CAD':1.25},
+    'USD':{'INR':1.18, 'CAD':1.47},
+    'CAD':{'INR':0.80, 'USD':0.68},
+}
+
+converted_amount=amount*conversion_table[currency][converted_currency]
+print(f'{amount} {currency} is equal to {converted_amount}')
