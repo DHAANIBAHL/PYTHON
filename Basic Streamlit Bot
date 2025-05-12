@@ -1,0 +1,7 @@
+import streamlit as st
+
+st.title("My first streamlit Program!")
+
+user_name = st.text_input("Enter your name")
+if user_name:
+    st.write(f"Hello, {user_name} 👋")
