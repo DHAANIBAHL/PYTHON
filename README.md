@@ -6,7 +6,7 @@ Welcome to my collection of Python mini-projects and practice programs! This rep
 # 📁 Contents
 This repo includes projects like:
 
-1. 🎲 **Dice Game** — Simulates a dice roll with random outcomes.
+1. 🎲 **Roll the dice** — Simulates a dice roll with random outcomes.
 2. ✂️ **Rock, Paper, Scissors** — A simple terminal-based game against the computer.
 3. 🔐 **Password Generator** — Creates strong random passwords.
 4. 📦 **QR Code Generator** — Generate QR codes from text or links.
