@@ -1,0 +1,32 @@
+import streamlit as st
+
+st.title("Coffee maker app")
+    
+add_creamer=st.checkbox("Add creamer")
+
+if add_creamer:
+    st.write("Creamer added to your coffee")
+
+coffee_type=st.radio("Pick your coffee base: ", ["Water", "Whole milk", "Oat milk", "Almond milk", "Soy milk"])
+
+flavour=st.selectbox("Choose your coffee flavor: ", ["Choose flavour", "Neutral", "Vanilla", "Chocolate", "Caramel", "Hazelnut", "Toffee"])
+
+sugar = st.slider("Select sugar level (spoons):", 0, 5, 3) #start,end,default value
+st.write(f"Sugar level selected: {sugar} spoon(s)")
+
+cups=st.number_input("How many cups of coffee would you like?", min_value=1, max_value=10, step=1) #min, ax, step size
+st.write(f"{cups} cup(s) of coffee will be brewed.")
+
+name=st.text_input("Enter your name: ")
+if name:
+    st.write(f"Welcome, {name}! Your coffee is on the way.")
+
+dob=st.date_input("Enter your birthday: ")
+if name:
+    st.write(f"Your birthday is on {dob}.")
+
+
+if st.button("Make Coffee"):
+    st.success("Your coffee is being brewed.")
+    print(f"Selected base {coffee_type}")
+
