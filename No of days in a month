@@ -1,0 +1,27 @@
+def get_days_in_month():
+    # Dictionary for month names and number of days
+    month_days = {
+        'january': 31,
+        'february': 28,  
+        'march': 31,
+        'april': 30,
+        'may': 31,
+        'june': 30,
+        'july': 31,
+        'august': 31,
+        'september': 30,
+        'october': 31,
+        'november': 30,
+        'december': 31
+    }
+    
+    # Get user input
+    month = input("Enter a month name: ").lower()
+    
+    # Check if month exists in dictionary
+    if month in month_days:
+        print(f"{month.capitalize()} has {month_days[month]} days.")
+    else:
+        print("Invalid month name. Please enter a valid month.")
+
+get_days_in_month()
